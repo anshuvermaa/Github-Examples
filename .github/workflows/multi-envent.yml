@@ -1,0 +1,15 @@
+on:
+  push:
+    branch:
+       - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo currunt time
+        run: |
+          echo "Hello, World!"
+          echo "Current date and time: $(date)"

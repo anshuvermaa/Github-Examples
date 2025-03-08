@@ -1,6 +1,8 @@
 on:
   schedule:
     - crone: '*/2 * * * *' // schedule every 2 minutes
+  push:
+    
 
 jobs:
   hello_world:
