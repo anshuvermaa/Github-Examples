@@ -1,7 +1,6 @@
 on:
   schedule:
     - crone: '*/2 * * * *' // schedule every 2 minutes
-  push:
     
 
 jobs:
@@ -11,4 +10,8 @@ jobs:
         - name: echo currunt time
           run: |
             echo "Hello, World!"
-            echo "Current date and time: $(date)" 
+            echo "Current date and time: $(date)"
+            echo "REF: $GITHUB_REF"
+            echo "Job ID: $GITHUB_JOB"
+            echo "Action: $GITHUB_ACTION"
+            echo "Actor: $GITHUB_ACTOR"
